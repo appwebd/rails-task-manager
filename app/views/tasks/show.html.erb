@@ -7,9 +7,11 @@
 </div>
 
 <br>
-<input type='checkbox' <%= @task.completed ? "checked":"&nbsp;" %>>
+<label>
+  <input type='checkbox' <%= @task.completed ? "checked":"&nbsp;" %>>
+</label>
 <%=
-  if (@task.completed)
+  if @task.completed
     "This task is completed"
   else
     "This tasks is not completed yet"
