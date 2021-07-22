@@ -4,7 +4,7 @@
   <label>
     <input type='checkbox' <%= item.completed ? "checked":"&nbsp;" %>>
   </label>
-  <%= link_to item.title, "tasks/#{item.id}" %> &nbsp; <%= link_to "Delete", tasks_path(item), method: :delete %><br>
+  <%= link_to item.title, "tasks/#{item.id}" %> &nbsp; <%= link_to "Delete", task_path(item), method: :delete %><br>
 <% end %>
 
 <br><br>
