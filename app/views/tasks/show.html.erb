@@ -1,0 +1,22 @@
+<h1><%= @record.title %></h1>
+<div  class=""><%= link_to 'Edit', "/tasks/#{@record.id}/edit" %></div>
+
+<div class="details">
+
+  <%= @record.details   %><br>
+
+</div>
+
+<br>
+<input type='checkbox' <%= @record.completed ? "checked":"&nbsp;" %>>
+<%=
+  if (@record.completed)
+    "This task is completed"
+  else
+    "This tasks is not completed yet"
+  end
+  %>
+
+<br><br><br>
+
+<%= link_to 'Back to list', '/tasks' %>
