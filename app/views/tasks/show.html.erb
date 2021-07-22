@@ -1,16 +1,15 @@
-<h1><%= @record.title %></h1>
-<div  class=""><%= link_to 'Edit', "/tasks/#{@record.id}/edit" %></div>
+<h1><%= @task.title %></h1>
 
 <div class="details">
 
-  <%= @record.details   %><br>
+  <%= @task.details   %><br>
 
 </div>
 
 <br>
-<input type='checkbox' <%= @record.completed ? "checked":"&nbsp;" %>>
+<input type='checkbox' <%= @task.completed ? "checked":"&nbsp;" %>>
 <%=
-  if (@record.completed)
+  if (@task.completed)
     "This task is completed"
   else
     "This tasks is not completed yet"
@@ -19,4 +18,4 @@
 
 <br><br><br>
 
-<%= link_to 'Back to list', '/tasks' %>
+<%= link_to 'Back to list', '/tasks' %> &nbsp; &nbsp; | &nbsp; &nbsp; <%= link_to 'Edit', "/tasks/#{@task.id}/edit" %>
